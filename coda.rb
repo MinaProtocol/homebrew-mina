@@ -17,6 +17,6 @@ class Coda < Formula
     bin.install("coda")
     bin.install("kademlia")
     system("mkdir", "-p", "/usr/local/var/coda")
-    system("cp", "-r", "keys", "/usr/local/var/coda")
+    system("cp", "-r", "keys/", "/usr/local/var/coda")
   end
 end
