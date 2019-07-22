@@ -1,5 +1,5 @@
 class Coda < Formula
-  desc "This is a test"
+  desc "Coda is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/CodaProtocol/coda"
   url "https://s3-us-west-2.amazonaws.com/wallet.o1test.net/coda-test.tar"
   sha256 "a93bb08ef66509db50f2683d77a33fccbf26dcf6175d4bb58a8f1333194a6625"
@@ -16,7 +16,6 @@ class Coda < Formula
   def install
     bin.install("coda")
     bin.install("kademlia")
-    system("mkdir", "-p", "/usr/local/var/coda")
-    system("cp", "-r", "keys/", "/usr/local/var/coda")
+    (var/"coda").install Dir["keys/*"]
   end
 end
