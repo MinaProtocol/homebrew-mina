@@ -17,6 +17,8 @@ class Coda < Formula
   def install
     bin.install("coda")
     bin.install("kademlia")
+    # Uncomment when we ship the next version containing coda-logproc
+    # bin.install("coda-logproc")
     (var/"coda").install Dir["keys/*"]
   end
 end
