@@ -1,9 +1,9 @@
 class Coda < Formula
   desc "Coda is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/CodaProtocol/coda"
-  url "https://github.com/CodaProtocol/coda/releases/download/0.0.11-beta4/homebrew-coda.tar.gz"
-  sha256 "2554d111d8b63bbd5f5c7c5c558a7c7f0fdcbfc32789b4396eca6284521f38ef"
-  revision 21
+  url "https://github.com/CodaProtocol/coda/releases/download/0.0.11-beta5/homebrew-coda.tar.gz"
+  sha256 "846b976eb223e56c8a764e72bca890b1b176b6673d1546ad47264b9252746816"
+  revision 22
 
   depends_on "gmp"
   depends_on "jemalloc"
@@ -19,7 +19,6 @@ class Coda < Formula
 
   def install
     bin.install("coda")
-    bin.install("kademlia")
     bin.install("coda-logproc")
     bin.install("coda-libp2p_helper")
     (var/"coda").install Dir["keys/*"]
