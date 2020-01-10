@@ -1,4 +1,4 @@
-class CodaRegenPubkey < Formula
+class CodaGenerateKeypairPhase3 < Formula
   desc "Coda is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/CodaProtocol/coda"
   url "https://storage.googleapis.com/network-debug/coda-generate-keypair-phase3/homebrew-coda-generate-keypair-phase3.tar.gz"
