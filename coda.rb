@@ -1,9 +1,9 @@
 class Coda < Formula
   desc "Coda is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/CodaProtocol/coda"
-  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/homebrew-coda.tar.gz"
-  sha256 "860913eaf04fd5b4ae15bdeff40fe6d3f13d4c11a1fe02e5eac020cae0ed0f73"
-  revision 23
+  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.12-beta3/homebrew-coda.tar.gz"
+  sha256 "939e627f3651fd76807304ab9f00103d6697da62304f911c4d57af9d595317f7"
+  revision 24
 
   depends_on "gmp"
   depends_on "jemalloc"
