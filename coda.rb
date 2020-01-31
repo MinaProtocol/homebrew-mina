@@ -3,7 +3,7 @@ class Coda < Formula
   homepage "https://github.com/CodaProtocol/coda"
   url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.11-beta5-redux/homebrew-coda.tar.gz"
   sha256 "e0e53c7ee01df31bd708b9a24a02a41ff246309e6887645701e1a2ba810261ff"
-  revision 24
+  revision 25
 
   depends_on "gmp"
   depends_on "jemalloc"
