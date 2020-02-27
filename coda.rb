@@ -1,4 +1,5 @@
 class Coda < Formula
+  # Note: Do not forget to update the peers below!
   desc "Coda is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/CodaProtocol/coda"
   url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.13-beta/homebrew-coda.tar.gz"
@@ -16,6 +17,42 @@ class Coda < Formula
   conflicts_with "coda-dev"
 
   bottle :unneeded
+  
+    plist_options :manual => "coda"
+
+  def plist; <<~EOS
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+      <key>Label</key>
+      <string>#{plist_name}</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>#{bin}/coda</string>
+        <string>daemon</string>
+        <string>-peer</string>
+        <string>/dns4/seed-one.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWP7fTKbyiUcYJGajQDpCFo2rDexgTHFJTxCH8jvcL1eAH</string>
+        <string>-peer</string>
+        <string>/dns4/seed-two.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWL9ywbiXNfMBqnUKHSB1Q1BaHFNUzppu6JLMVn9TTPFSA</string>
+      </array>
+      <key>KeepAlive</key>
+      <true/>
+      <key>RunAtLoad</key>
+      <true/>
+      <key>EnvironmentVariables</key>
+      <dict>
+        <key>PATH</key>
+        <string>#{bin}:/usr/bin</string>
+      </dict>
+      <key>StandardErrorPath</key>
+      <string>/tmp/coda.service.err</string>
+      <key>StandardOutPath</key>
+      <string>/tmp/coda.service.out</string>
+    </dict>
+    </plist>
+  EOS
+  end
 
   def install
     bin.install("coda")
