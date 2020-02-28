@@ -1,10 +1,11 @@
 class Coda < Formula
-  # Note: Do not forget to update the peers below!
   desc "Coda is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/CodaProtocol/coda"
   url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.13-beta/homebrew-coda.tar.gz"
   sha256 "a9b826e392efdec515debcdae72f6fd760938231b58495fb8b8d7950104e7ef9"
   revision 26
+  @peer1 = "/dns4/seed-one.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWP7fTKbyiUcYJGajQDpCFo2rDexgTHFJTxCH8jvcL1eAH"
+  @peer2 = "/dns4/seed-two.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWL9ywbiXNfMBqnUKHSB1Q1BaHFNUzppu6JLMVn9TTPFSA"
 
   depends_on "gmp"
   depends_on "jemalloc"
@@ -32,9 +33,9 @@ class Coda < Formula
         <string>#{bin}/coda</string>
         <string>daemon</string>
         <string>-peer</string>
-        <string>/dns4/seed-one.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWP7fTKbyiUcYJGajQDpCFo2rDexgTHFJTxCH8jvcL1eAH</string>
+        <string>#{@peer1}</string>
         <string>-peer</string>
-        <string>/dns4/seed-two.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWL9ywbiXNfMBqnUKHSB1Q1BaHFNUzppu6JLMVn9TTPFSA</string>
+        <string>#{@peer2}</string>
       </array>
       <key>KeepAlive</key>
       <true/>
