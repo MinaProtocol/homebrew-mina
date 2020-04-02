@@ -9,6 +9,7 @@ class CodaGenerateKeypairPhase3 < Formula
   depends_on "gmp"
   depends_on "libomp"
   depends_on "libffi"
+  depends_on "jemalloc"
 
   bottle :unneeded
 
