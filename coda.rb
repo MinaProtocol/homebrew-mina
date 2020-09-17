@@ -1,9 +1,9 @@
 class Coda < Formula
   desc "Coda is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/CodaProtocol/coda"
-  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.14-beta-32b/coda3.tar.gz"
-  sha256 "b9574df76a0e4dfb0317c7da7a2fb08cc001a6356256d6da7f23e9feddbdf3f3"
-  revision 31
+  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.15-beta/homebrew-coda.tar.gz"
+  sha256 "08cbb452cb40c80ad9e466685a88d59b6e30879d005360c76706334fdeff30f4"
+  revision 32
   @peer1 = "/dns4/seed-one.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWP7fTKbyiUcYJGajQDpCFo2rDexgTHFJTxCH8jvcL1eAH"
   @peer2 = "/dns4/seed-two.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWL9ywbiXNfMBqnUKHSB1Q1BaHFNUzppu6JLMVn9TTPFSA"
 
@@ -59,7 +59,5 @@ class Coda < Formula
     mkdir_p("/tmp/s3_cache_dir")
     bin.install("coda")
     bin.install("coda-logproc")
-    bin.install("coda-libp2p_helper")
-    (var/"coda").install Dir["keys/*"]
   end
 end
