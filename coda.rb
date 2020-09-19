@@ -1,11 +1,10 @@
 class Coda < Formula
   desc "Coda is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/CodaProtocol/coda"
-  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.15-beta/homebrew-coda.tar.gz"
-  sha256 "08cbb452cb40c80ad9e466685a88d59b6e30879d005360c76706334fdeff30f4"
-  revision 32
+  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.16-beta7/homebrew-coda.tar.gz"
+  sha256 "93f9abedcf06d0c65581d30fea1b384359103b17f6f6e8bb18ee7602b415e0fd"
+  revision 33
   @peer1 = "/dns4/seed-one.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWP7fTKbyiUcYJGajQDpCFo2rDexgTHFJTxCH8jvcL1eAH"
-  @peer2 = "/dns4/seed-two.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWL9ywbiXNfMBqnUKHSB1Q1BaHFNUzppu6JLMVn9TTPFSA"
 
   depends_on "gmp"
   depends_on "jemalloc"
@@ -34,8 +33,6 @@ class Coda < Formula
         <string>daemon</string>
         <string>-peer</string>
         <string>#{@peer1}</string>
-        <string>-peer</string>
-        <string>#{@peer2}</string>
       </array>
       <key>KeepAlive</key>
       <true/>
@@ -59,5 +56,6 @@ class Coda < Formula
     mkdir_p("/tmp/s3_cache_dir")
     bin.install("coda")
     bin.install("coda-logproc")
+    (var/"coda").install Dir["var/*"]
   end
 end
