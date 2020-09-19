@@ -56,6 +56,6 @@ class Coda < Formula
     mkdir_p("/tmp/s3_cache_dir")
     bin.install("coda")
     bin.install("coda-logproc")
-    ln_s Dir.glob("var/*"), "/var/lib/coda"
+    (var/"coda").install Dir["var/*"]
   end
 end
