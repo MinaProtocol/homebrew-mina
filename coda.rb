@@ -3,8 +3,8 @@ class Coda < Formula
   homepage "https://github.com/CodaProtocol/coda"
   url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.16-beta7/homebrew-coda.tar.gz"
   sha256 "93f9abedcf06d0c65581d30fea1b384359103b17f6f6e8bb18ee7602b415e0fd"
-  revision 33
-  @peer1 = "/dns4/seed-one.genesis-redux.o1test.net/tcp/10002/ipfs/12D3KooWP7fTKbyiUcYJGajQDpCFo2rDexgTHFJTxCH8jvcL1eAH"
+  revision 34
+  @peer1 = " /dns4/pickles.o1test.net/tcp/10001/ipfs/12D3KooWAFFq2yEQFFzhU5dt64AWqawRuomG9hL8rSmm5vxhAsgr"
 
   depends_on "gmp"
   depends_on "jemalloc"
@@ -56,6 +56,6 @@ class Coda < Formula
     mkdir_p("/tmp/s3_cache_dir")
     bin.install("coda")
     bin.install("coda-logproc")
-    (var/"coda").install Dir["var/*"]
+    ln_s Dir.glob("var/*"), "/tmp/s3_cache_dir"
   end
 end
