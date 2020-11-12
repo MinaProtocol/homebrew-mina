@@ -1,9 +1,9 @@
 class MinaGenerateKeypairPhase3 < Formula
   desc "Mina is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/MinaProtocol/mina"
-  url "https://storage.googleapis.com/network-debug/coda-generate-keypair-phase3/homebrew-coda-generate-keypair-phase3-3.tar.gz"
-  sha256 "13cd7636ee91dc9a22e001a8bbd8759a03adb8806c6ac59c5365a4f1d9d9a585"
-  revision 102
+  url "https://storage.googleapis.com/network-debug/mina-generate-keypair/homebrew-mina-generate-keypair.tar.gz"
+  sha256 "36705f6a296f3263defe1778df16502da9823329c2ba508ec73ade55e252e7d6"
+  revision 103
   depends_on "openssl"
   depends_on "libsodium"
   depends_on "gmp"
@@ -14,6 +14,6 @@ class MinaGenerateKeypairPhase3 < Formula
   bottle :unneeded
 
   def install
-    bin.install("coda-generate-keypair-phase3")
+    bin.install("mina-generate-keypair")
   end
 end
