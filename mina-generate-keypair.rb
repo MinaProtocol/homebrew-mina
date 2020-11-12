@@ -1,4 +1,4 @@
-class MinaGenerateKeypairPhase3 < Formula
+class MinaGenerateKeypair < Formula
   desc "Mina is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/MinaProtocol/mina"
   url "https://storage.googleapis.com/network-debug/mina-generate-keypair/homebrew-mina-generate-keypair.tar.gz"
