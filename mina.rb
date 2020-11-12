@@ -1,6 +1,6 @@
-class Coda < Formula
-  desc "Coda is the first cryptocurrency protocol with a succinct blockchain."
-  homepage "https://github.com/CodaProtocol/coda"
+class Mina < Formula
+  desc "Mina is the first cryptocurrency protocol with a succinct blockchain."
+  homepage "https://github.com/MinaProtocol/mina"
   url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.16-beta7/homebrew-coda.tar.gz"
   sha256 "93f9abedcf06d0c65581d30fea1b384359103b17f6f6e8bb18ee7602b415e0fd"
   revision 34
@@ -14,11 +14,11 @@ class Coda < Formula
   depends_on "libffi"
   depends_on "miniupnpc" => :recommended
 
-  conflicts_with "coda-dev"
+  conflicts_with "mina-dev"
 
   bottle :unneeded
   
-    plist_options :manual => "coda"
+    plist_options :manual => "mina"
 
   def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
