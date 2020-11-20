@@ -1,10 +1,9 @@
 class Mina < Formula
   desc "Mina is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/MinaProtocol/mina"
-  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.16-beta7/homebrew-coda.tar.gz"
-  sha256 "93f9abedcf06d0c65581d30fea1b384359103b17f6f6e8bb18ee7602b415e0fd"
-  revision 34
-  @peer1 = " /dns4/pickles.o1test.net/tcp/10001/ipfs/12D3KooWAFFq2yEQFFzhU5dt64AWqawRuomG9hL8rSmm5vxhAsgr"
+  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.16-beta7/homebrew-mina.tar.gz"
+  sha256 "c0a1e3b2946a8dbdf2f3df038f2f10105dc7ea355e93922bbf4ad7231b278499"
+  revision 35
 
   depends_on "gmp"
   depends_on "jemalloc"
@@ -31,6 +30,12 @@ class Mina < Formula
       <array>
         <string>#{bin}/coda</string>
         <string>daemon</string>
+        <string>-peer-list-file</string>
+        <string>~/peers.txt</string>
+        <string>-block-producer-key</string>
+        <string>~/keys/my-wallet</string>
+        <string>-generate-genesis-proof</string>
+        <string>true</string>
         <string>-peer</string>
         <string>#{@peer1}</string>
       </array>
@@ -56,6 +61,7 @@ class Mina < Formula
     mkdir_p("/tmp/s3_cache_dir")
     bin.install("coda")
     bin.install("coda-logproc")
+    bin.install("coda-libp2p_helper")
     ln_s Dir.glob("var/*"), "/tmp/s3_cache_dir"
   end
 end
