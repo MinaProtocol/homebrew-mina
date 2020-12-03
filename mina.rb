@@ -3,7 +3,7 @@ class Mina < Formula
   homepage "https://github.com/MinaProtocol/mina"
   url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.16-beta7b/homebrew-mina.tar.gz"
   sha256 "21fece114a01413b9492b8e198dd1553c33363703b42fb4e6b51ea907588438d"
-  revision 35
+  revision 36
 
   depends_on "gmp"
   depends_on "jemalloc"
