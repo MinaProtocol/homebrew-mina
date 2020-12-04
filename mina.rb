@@ -3,7 +3,7 @@ class Mina < Formula
   homepage "https://github.com/MinaProtocol/mina"
   url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.17-beta8/homebrew-mina.tar.gz"
   sha256 "7586c94dc54fbff0730f46a38da65d41acd06a96c2ed7a57ac18e423cfffeeb7"
-  revision 37
+  revision 38
 
   depends_on "gmp"
   depends_on "jemalloc"
@@ -60,6 +60,6 @@ class Mina < Formula
     bin.install("coda")
     bin.install("coda-logproc")
     bin.install("coda-libp2p_helper")
-    ln_s Dir.glob("var/*"), "/tmp/s3_cache_dir"
+    cp Dir.glob("var/*"), "/tmp/s3_cache_dir"
   end
 end
