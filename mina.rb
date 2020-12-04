@@ -1,9 +1,9 @@
 class Mina < Formula
   desc "Mina is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/MinaProtocol/mina"
-  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.16-beta7b/homebrew-mina.tar.gz"
-  sha256 "21fece114a01413b9492b8e198dd1553c33363703b42fb4e6b51ea907588438d"
-  revision 36
+  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.17-beta8/homebrew-mina.tar.gz"
+  sha256 "7586c94dc54fbff0730f46a38da65d41acd06a96c2ed7a57ac18e423cfffeeb7"
+  revision 37
 
   depends_on "gmp"
   depends_on "jemalloc"
