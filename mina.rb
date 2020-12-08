@@ -57,9 +57,9 @@ class Mina < Formula
 
   def install
     mkdir_p("/tmp/s3_cache_dir")
-    bin.install("package/coda")
-    bin.install("package/coda-logproc")
-    bin.install("package/coda-libp2p_helper")
-    cp Dir.glob("package/var/*"), "/tmp/s3_cache_dir"
+    bin.install("coda")
+    bin.install("coda-logproc")
+    bin.install("coda-libp2p_helper")
+  #  cp Dir.glob("var/*"), "/tmp/s3_cache_dir"
   end
 end
