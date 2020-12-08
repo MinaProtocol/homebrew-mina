@@ -1,9 +1,9 @@
 class Mina < Formula
   desc "Mina is the first cryptocurrency protocol with a succinct blockchain."
   homepage "https://github.com/MinaProtocol/mina"
-  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.17-beta9/homebrew-mina.tar.gz"
-  sha256 "c5793ae6d41917f7da875a0235d087af29bd8e402f871e3271afe6988e82de4f"
-  revision 39
+  url "https://s3-us-west-2.amazonaws.com/packages.o1test.net/0.0.17-beta10/homebrew-coda.tar.gz"
+  sha256 "6bac1cde1bc138d5aa9c290368652bd65a362127cc706736c3ddc5bdaa5aa846"
+  revision 40
 
   depends_on "gmp"
   depends_on "jemalloc"
@@ -57,9 +57,9 @@ class Mina < Formula
 
   def install
     mkdir_p("/tmp/s3_cache_dir")
-    bin.install("coda")
-    bin.install("coda-logproc")
-    bin.install("coda-libp2p_helper")
-    cp Dir.glob("var/*"), "/tmp/s3_cache_dir"
+    bin.install("package/coda")
+    bin.install("package/coda-logproc")
+    bin.install("package/coda-libp2p_helper")
+    cp Dir.glob("package/var/*"), "/tmp/s3_cache_dir"
   end
 end
